@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="mac" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="storyBoardTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-Ov-L7E">
+                                <rect key="frame" x="293" y="246" width="213" height="108.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lo9-Ov-L7E" secondAttribute="height" multiplier="55:28" id="Y1W-vS-F5O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="47"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAR-5f-IaT">
+                                <rect key="frame" x="356" y="396" width="87" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="eva-Hz-c0i" kind="show" id="7wF-66-Rwf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lo9-Ov-L7E" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5P7-TO-92J"/>
+                            <constraint firstItem="iAR-5f-IaT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7vg-aa-q8f"/>
+                            <constraint firstItem="lo9-Ov-L7E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BCX-XE-nK1"/>
+                            <constraint firstItem="iAR-5f-IaT" firstAttribute="width" secondItem="lo9-Ov-L7E" secondAttribute="width" multiplier="0.409091" id="UuS-WU-WLO"/>
+                            <constraint firstItem="iAR-5f-IaT" firstAttribute="top" secondItem="lo9-Ov-L7E" secondAttribute="bottom" constant="42" id="ZSG-pc-fxv"/>
+                            <constraint firstItem="iAR-5f-IaT" firstAttribute="height" secondItem="lo9-Ov-L7E" secondAttribute="height" multiplier="0.285714" id="xag-Vf-W3d"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="90"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="x6O-kq-78d">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="eva-Hz-c0i" customClass="CameraVC" customModule="storyBoardTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1hk-Vu-778">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-z5-peD">
+                                <rect key="frame" x="367" y="304" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="vWk-8L-Jgb" kind="unwind" unwindAction="unwind:" id="0AU-2i-sR1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nZD-YK-3P5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s12-KH-Ng9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tbf-Nq-2CG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="vWk-8L-Jgb" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="830" y="39"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
