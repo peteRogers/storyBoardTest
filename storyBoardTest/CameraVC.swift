@@ -11,6 +11,7 @@ import Vision
 
 class CameraVC: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate
 {
+    @IBOutlet weak var button: UIButton!
     var visionToAVFTransform = CGAffineTransform.identity
     var request: VNDetectHumanRectanglesRequest!
     private let captureSession = AVCaptureSession()
@@ -35,6 +36,7 @@ class CameraVC: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate
     override func viewDidLayoutSubviews() {
            super.viewDidLayoutSubviews()
            self.previewLayer.frame = self.view.bounds
+        //view.bringSubviewToFront(button)
        }
     
     
@@ -48,7 +50,7 @@ class CameraVC: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate
          
      
          for result in results{
-            print(result.boundingBox.minX)
+            // print(result.boundingBox)
              redBoxes.append(result.boundingBox)
              show(boxGroups: [(color: UIColor.red.cgColor, boxes: redBoxes)])
              
@@ -64,8 +66,10 @@ class CameraVC: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate
             for boxGroup in boxGroups {
                 let color = boxGroup.color
                 for box in boxGroup.boxes {
-                    let rect = layer.layerRectConverted(fromMetadataOutputRect: box.applying(self.visionToAVFTransform))
                     
+                    let rect = layer.layerRectConverted(fromMetadataOutputRect: box)
+                  
+                    //print(rect)
                     self.draw(rect: rect, color: color)
                 }
             }
@@ -79,9 +83,12 @@ class CameraVC: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate
             layer.opacity = 1
             layer.borderColor = color
             layer.borderWidth = 2.5
+            
             layer.frame = rect
+            layer.frame.origin.y = self.view.frame.height - layer.frame.maxY
+           // layer.isGeometryFlipped = true
             boxLayer.append(layer)
-            self.previewLayer.insertSublayer(layer, at: 1)
+            self.previewLayer.addSublayer(layer)
         }
         
         // Remove all drawn boxes. Must be called on main queue.
@@ -99,7 +106,7 @@ class CameraVC: UIViewController,  AVCaptureVideoDataOutputSampleBufferDelegate
               debugPrint("unable to get image from sample buffer")
               return
           }
-          print("did receive image frame")
+          //print("did receive image frame")
         let requestHandler = VNImageRequestHandler(cvPixelBuffer: frame, orientation: .up, options: [:])
                     do {
                         try requestHandler.perform([request])

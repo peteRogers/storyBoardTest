@@ -58,9 +58,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-z5-peD">
-                                <rect key="frame" x="367" y="304" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVG-z5-peD">
+                                <rect key="frame" x="307" y="266" width="187" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="MWd-BZ-96i"/>
+                                    <constraint firstAttribute="height" constant="68" id="mCD-fy-cuy"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
@@ -70,13 +73,20 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nZD-YK-3P5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AVG-z5-peD" firstAttribute="centerX" secondItem="nZD-YK-3P5" secondAttribute="centerX" id="Ycd-a4-571"/>
+                            <constraint firstItem="AVG-z5-peD" firstAttribute="centerY" secondItem="nZD-YK-3P5" secondAttribute="centerY" id="hiL-p5-CUr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="s12-KH-Ng9"/>
+                    <connections>
+                        <outlet property="button" destination="AVG-z5-peD" id="kqb-6b-CgW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbf-Nq-2CG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="vWk-8L-Jgb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="830" y="39"/>
+            <point key="canvasLocation" x="829.5" y="39"/>
         </scene>
     </scenes>
     <resources>
