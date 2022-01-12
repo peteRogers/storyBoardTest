@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6179C24A278C78FD007D49E9 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6179C249278C78FD007D49E9 /* CameraVC.swift */; };
+		61B65D8B278F27E900C61E83 /* lamdmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B65D8A278F27E900C61E83 /* lamdmarkVC.swift */; };
 		61E86E52278C52B900C1E096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E86E51278C52B900C1E096 /* AppDelegate.swift */; };
 		61E86E54278C52B900C1E096 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E86E53278C52B900C1E096 /* SceneDelegate.swift */; };
 		61E86E56278C52B900C1E096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E86E55278C52B900C1E096 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		6179C249278C78FD007D49E9 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		61B65D8A278F27E900C61E83 /* lamdmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lamdmarkVC.swift; sourceTree = "<group>"; };
 		61E86E4E278C52B900C1E096 /* storyBoardTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = storyBoardTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61E86E51278C52B900C1E096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61E86E53278C52B900C1E096 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				61E86E53278C52B900C1E096 /* SceneDelegate.swift */,
 				61E86E55278C52B900C1E096 /* ViewController.swift */,
 				6179C249278C78FD007D49E9 /* CameraVC.swift */,
+				61B65D8A278F27E900C61E83 /* lamdmarkVC.swift */,
 				61E86E57278C52B900C1E096 /* Main.storyboard */,
 				61E86E5A278C52BC00C1E096 /* Assets.xcassets */,
 				61E86E5C278C52BC00C1E096 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E86E56278C52B900C1E096 /* ViewController.swift in Sources */,
+				61B65D8B278F27E900C61E83 /* lamdmarkVC.swift in Sources */,
 				61E86E52278C52B900C1E096 /* AppDelegate.swift in Sources */,
 				61E86E54278C52B900C1E096 /* SceneDelegate.swift in Sources */,
 				6179C24A278C78FD007D49E9 /* CameraVC.swift in Sources */,

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-Ov-L7E">
-                                <rect key="frame" x="293" y="246" width="213" height="108.5"/>
+                                <rect key="frame" x="266" y="232" width="269" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lo9-Ov-L7E" secondAttribute="height" multiplier="55:28" id="Y1W-vS-F5O"/>
                                 </constraints>
@@ -26,22 +26,34 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAR-5f-IaT">
-                                <rect key="frame" x="356" y="396" width="87" height="31"/>
+                                <rect key="frame" x="345" y="410" width="110" height="39"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CAMERA"/>
                                 <connections>
                                     <segue destination="eva-Hz-c0i" kind="show" id="7wF-66-Rwf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zEZ-vR-6qq">
+                                <rect key="frame" x="345" y="470" width="110" height="39"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="LANDMARKS"/>
+                                <connections>
+                                    <segue destination="0lV-3D-7OV" kind="show" id="Isf-ws-cbN"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zEZ-vR-6qq" firstAttribute="height" secondItem="iAR-5f-IaT" secondAttribute="height" id="2Ls-S1-Tfk"/>
                             <constraint firstItem="lo9-Ov-L7E" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5P7-TO-92J"/>
                             <constraint firstItem="iAR-5f-IaT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7vg-aa-q8f"/>
                             <constraint firstItem="lo9-Ov-L7E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BCX-XE-nK1"/>
+                            <constraint firstItem="zEZ-vR-6qq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Re5-Zh-ge2"/>
                             <constraint firstItem="iAR-5f-IaT" firstAttribute="width" secondItem="lo9-Ov-L7E" secondAttribute="width" multiplier="0.409091" id="UuS-WU-WLO"/>
                             <constraint firstItem="iAR-5f-IaT" firstAttribute="top" secondItem="lo9-Ov-L7E" secondAttribute="bottom" constant="42" id="ZSG-pc-fxv"/>
+                            <constraint firstItem="zEZ-vR-6qq" firstAttribute="top" secondItem="iAR-5f-IaT" secondAttribute="bottom" constant="20" id="fXh-qw-egb"/>
+                            <constraint firstItem="zEZ-vR-6qq" firstAttribute="width" secondItem="iAR-5f-IaT" secondAttribute="width" id="qsC-Pr-xAV"/>
                             <constraint firstItem="iAR-5f-IaT" firstAttribute="height" secondItem="lo9-Ov-L7E" secondAttribute="height" multiplier="0.285714" id="xag-Vf-W3d"/>
                         </constraints>
                     </view>
@@ -87,6 +99,22 @@
                 <exit id="vWk-8L-Jgb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="829.5" y="39"/>
+        </scene>
+        <!--LamdmarkVC-->
+        <scene sceneID="o24-1i-ESO">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="0lV-3D-7OV" customClass="LamdmarkVC" customModule="storyBoardTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Kt6-va-9aV">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4N8-kq-U5t"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2gY-QY-wbY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TlQ-TD-ZrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="690"/>
         </scene>
     </scenes>
     <resources>
